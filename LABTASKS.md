@@ -11,7 +11,7 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 
 #####What is the purpose of app.js? Explain what happens when a user is trying to access a page "kittens", when a user is trying to access the page "petForm", and when the user submits a form on "petForm". Explain what a "route" is.
 
-> Your Answer Here!
+> Purpose of app.js: Acts as an action-listener to control the web page by managing client-side requests and responses.
 
 #####What is the contents of the "public" folder? What is each of the html files there and how are they referenced in app.js?
 
@@ -56,4 +56,3 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 - Add the basic html to the send so that the GPA is displayed as an html page. Don't add too much: later we will be using various libraries to take care of generating html.
 
 - As you are working, don't forget to change drivers in pair-programming, practice TDD, write comments, and make frequent commits. As before, at the end just push all the changes to github.
-
