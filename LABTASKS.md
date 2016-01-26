@@ -13,6 +13,14 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 
 > Purpose of app.js: Acts as an action-listener to control the web page by managing client-side requests and responses.
 
+> Kittens rather than sending a new web page, it is sending text saying that the webpage is under construction.
+
+> petForm sends the user to a new page that displays a form.
+
+> When submitting to petForm, it takes what you have submitted and displays the length of the string.
+
+> A route is the process for taking an incoming request, and delivering it to whatever function, page, etc. that it needs to go.
+
 #####What is the contents of the "public" folder? What is each of the html files there and how are they referenced in app.js?
 
 > Your Answer Here!
