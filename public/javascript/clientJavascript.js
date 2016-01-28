@@ -40,8 +40,12 @@ var leetify = function(s){
             str[i] = '(';
         } else if (str[i] == 'e' || str[i] == 'E'){
             str[i] = '3';
+        } else if (str[i] == 'h' || str[i] == 'H'){
+            str[i] = '#';
         } else if (str[i] == 'l' || str[i] == 'L'){
             str[i] = '1';
+        } else if (str[i] == 'o' || str[i] == 'O'){
+            str[i] = '0';
         } else if (str[i] == 't' || str[i] == 'T'){
             str[i] = '7';
         }
