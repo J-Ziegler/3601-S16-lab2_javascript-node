@@ -29,14 +29,27 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 
 > We edited app.js under the line app.get(/kittens....
 
-
 #####Also change the message that a user sees when they are trying to find a page that doesn't exist.
 
 > Added a 404.html page that redirects to the main page
 
 #####Describe what happens when you submit a form on petForm page. What are the form parameters in petForm? What is the method for the form? Where is the form submission handled in the project? How are parameters extracted? How is the resulting message generated? How is this different from accessing the page petForm the first time (to see the form)?
 
->
+> petForm sends the user to a new page that displays a form.
+
+> When submitting to petForm, it takes what you have submitted and displays the length of the string.
+
+> The form parameters are new pet and submit
+
+> The method is post, http post transaction
+
+> /petform submission is handled in app.js
+
+> The app.js function references parameters by name. Specifically, newPet is referenced by req.body.newPet
+
+> The function generates a String based on the input, by calling out to a stringLength() function.
+
+> The first time you view the page, you view the interactive HTML page displaying the form. When you press submit, the server sends you the resultant String instead.
 
 #####Where is client-side Javascript defined? Name file(s) in which it is used.
 
