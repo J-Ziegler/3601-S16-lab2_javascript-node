@@ -57,15 +57,27 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 
 #####Where is server-side Javascript helper file defined? Where can it be used? Add a function to it and experiment with where you can call this function.
 
+> In the project directory.
+
 #####What is the purpose of package.json file? What's in it, and what does it mean?
 
+> Lists all the behind-the-scenes requirements. Test instructions, package requirements, etc.
+
 #####What's in .gitgnore file? What's the purpose of it?
+
+> Tells git to ignore files that aren't relevant. Often these include local installations, software junk, and build files.
 
 ## Part #2: exploring testing
 
 #####Find the testing file, describe where it is located and what it is testing. Run karma (the testing engine) as specified in the Readme and describe results. Do not edit any files at this time.
 
+> Found the testing file. It is ./public/javascript/clientJavascript.spec.js, and tests the functionality of the functions in clientJavascript.js.
+
 #####After having set up Travis CI with your forked project, play around the page for your project (build history, settings, branches, etc) and describe at least 3 features you think would be useful when troubleshooting a broken project.
+
+>
+
+> BONUS: Things it does wrong? Sends me emails every 5 seconds about every single build status, and won't let me disable the emails. My phone has been buzzing all lab.
 
 #####What was the build status of your project right after you got everything set up? Use Travis to find any problems, and describe what failed, if anything. (Which files, what lines, why did failure occur, etc.)
 

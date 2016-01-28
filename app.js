@@ -47,7 +47,10 @@ app.get('/petForm', function(req, res){
 });
 
 app.post('/petForm', function(req, res){
-    res.send(req.body.newPet + " String Length: " + tools.stringLength(req.body.newPet));
+    res.send(
+        req.body.newPet + " String Length: " + tools.stringLength(req.body.newPet) +
+        "Your pet's name contains " + tools.countVowels(req.body.newPet) + " vowels. That's not nearly enough!!!" // This is our added function. Text formatting is annoying.
+    );
     console.log(req.body.newPet);
 });
 
