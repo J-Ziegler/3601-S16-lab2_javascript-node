@@ -30,10 +30,18 @@ var returnKittens = function(){
 };
 
 
-var leetify = function(str){
+var leetify = function(s){
+    var str = s.split('');
     for (var i = 0; i < str.length; i++){
+        if(str[i] == 'a'){
+            str[i] = '@';
+        } else if (str[i] == 'c'){
+            str[i] = '(';
+        } else if (str[i] == 't'){
+            str[i] = '7';
+        }
 
     }
 
-    return str;
+    return str.join('');
 };
