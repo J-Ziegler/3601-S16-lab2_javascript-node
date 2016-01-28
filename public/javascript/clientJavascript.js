@@ -29,3 +29,11 @@ var returnKittens = function(){
     return "kittens";
 };
 
+
+var leetify = function(str){
+    for (var i = 0; i < str.length; i++){
+
+    }
+
+    return str;
+};
