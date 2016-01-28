@@ -32,7 +32,11 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 
 #####Also change the message that a user sees when they are trying to find a page that doesn't exist.
 
+> Added a 404.html page that redirects to the main page
+
 #####Describe what happens when you submit a form on petForm page. What are the form parameters in petForm? What is the method for the form? Where is the form submission handled in the project? How are parameters extracted? How is the resulting message generated? How is this different from accessing the page petForm the first time (to see the form)?
+
+>
 
 #####Where is client-side Javascript defined? Name file(s) in which it is used.
 
