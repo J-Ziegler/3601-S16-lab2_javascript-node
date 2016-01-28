@@ -30,17 +30,17 @@ var returnKittens = function(){
 };
 
 
+// Lots of cases? Sure. Necessary? No. Worth it? Really also no.
 var leetify = function(s){
     var str = s.split('');
     for (var i = 0; i < str.length; i++){
-        if(str[i] == 'a'){
+        if(str[i] == 'a' || str[i] == 'A'){
             str[i] = '@';
-        } else if (str[i] == 'c'){
+        } else if (str[i] == 'c' || str[i] == 'C'){
             str[i] = '(';
-        } else if (str[i] == 't'){
+        } else if (str[i] == 't' || str[i] == 'T'){
             str[i] = '7';
         }
-
     }
 
     return str.join('');
