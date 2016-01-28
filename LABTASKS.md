@@ -23,11 +23,12 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 
 #####What is the contents of the "public" folder? What is each of the html files there and how are they referenced in app.js?
 
-> Your Answer Here!
+> The public folder contains everything that the client would use.
 
 #####In your project change the message that appears when the user is trying to access the page "kittens". Describe what you did and how it worked.
 
-> You get the idea...
+> We edited app.js under the line app.get(/kittens....
+
 
 #####Also change the message that a user sees when they are trying to find a page that doesn't exist.
 
