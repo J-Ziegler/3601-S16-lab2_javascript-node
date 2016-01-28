@@ -53,6 +53,8 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 
 #####Where is client-side Javascript defined? Name file(s) in which it is used.
 
+> In public/javascript. The sendAlert() function is used in index.html, and the other two functions are used in clientJavascript.spec.js
+
 #####Where is server-side Javascript helper file defined? Where can it be used? Add a function to it and experiment with where you can call this function.
 
 #####What is the purpose of package.json file? What's in it, and what does it mean?
