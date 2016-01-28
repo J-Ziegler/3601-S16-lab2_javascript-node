@@ -75,13 +75,22 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 
 #####After having set up Travis CI with your forked project, play around the page for your project (build history, settings, branches, etc) and describe at least 3 features you think would be useful when troubleshooting a broken project.
 
->
+> You can see which commits are passing and failing at any time. It also mentions who sent the commits, so you can witch hunt. <Pitchforks!>
 
-> BONUS: Things it does wrong? Sends me emails every 5 seconds about every single build status, and won't let me disable the emails. My phone has been buzzing all lab.
+> You can set it to build pull requests, which would stop you from breaking things in the first place.
+
+> You can view the success/failure of any of your branches, to see where problems may have come from.
+
+> BONUS: Things it does wrong? Sends me emails every 5 seconds about every single build status, and won't let me disable the emails. My phone has been buzzing all lab. (To be fair I fixed it, but it's still annoying I can't do it at the account level. I could add 500 people to my list and it'd bother them too...)
 
 #####What was the build status of your project right after you got everything set up? Use Travis to find any problems, and describe what failed, if anything. (Which files, what lines, why did failure occur, etc.)
 
+> The project was failing 1 test. Specifically, it said "Expected 'kittens' to be 'Not Kittens!' This test is located in ./public/javascript/clientJavascript.spec.js. The test failed because it was checking for exact matching, and the Strings did not match.
+
 #####Fix any problems described in the previous question. Describe how you fixed them. Push your fix to GitHub and post a link to the passing build (from build history) here.
+
+> We fixed it by asserting that the strings would NOT match. You could make it pass in various ways, but this one is ours.
+> https://github.com/J-Ziegler/3601-S16-lab2_javascript-node/commit/c46bb343bf33d5567eaf99db08ada2fc0986ec95
 
 - Study jasmine testing syntax. Think of a Javascript function, describe its behavior by writing tests for it (this is test-driven development, or TDD). Add the function, run the tests. (Actually do this. Don't forget to commit your changes!)
 
