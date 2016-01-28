@@ -36,18 +36,28 @@ var leetify = function(s){
     for (var i = 0; i < str.length; i++){
         if(str[i] == 'a' || str[i] == 'A'){
             str[i] = '@';
+        } else if (str[i] == 'b' || str[i] == 'B'){
+            str[i] = '8';
         } else if (str[i] == 'c' || str[i] == 'C'){
             str[i] = '(';
         } else if (str[i] == 'e' || str[i] == 'E'){
             str[i] = '3';
+        } else if (str[i] == 'g' || str[i] == 'G'){
+            str[i] = '6';
         } else if (str[i] == 'h' || str[i] == 'H'){
             str[i] = '#';
+        } else if (str[i] == 'i' || str[i] == 'I'){
+            str[i] = '!';
         } else if (str[i] == 'l' || str[i] == 'L'){
             str[i] = '1';
         } else if (str[i] == 'o' || str[i] == 'O'){
             str[i] = '0';
+        } else if (str[i] == 's' || str[i] == 'S'){
+            str[i] = '$';
         } else if (str[i] == 't' || str[i] == 'T'){
             str[i] = '7';
+        } else if (str[i] == 'z' || str[i] == 'Z'){
+            str[i] = '2';
         }
     }
 
