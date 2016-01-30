@@ -29,14 +29,63 @@ describe('testing basic functions', function(){
 
     // Testing for the GPA Calculator.
     it('Calculate the GPA', function(){
-        var calculateGPA = function(gradeOne, creditsOne, gradeTwo, creditsTwo, gradeThree, creditsThree){
+        var letToNum = function(letGrade){ // Yes,it's redundant. But... Reasons. I'll probably fix it later, add it to the tech debt, whatever.
+            //if (!letGrade.isString) {
+            //    throw InvalidParamsError();
+            //}
+            var letterGrade = letGrade.toUpperCase();
 
+            if (letterGrade == "A") {
+                return 4.00;
+            } else if (letterGrade == "A-"){
+                return 3.66;
+            } else if (letterGrade == "B+"){
+                return 3.33;
+            } else if (letterGrade == "B"){
+                return 3.00;
+            } else if (letterGrade == "B-"){
+                return 2.66;
+            } else if (letterGrade == "C+"){
+                return 2.33;
+            } else if (letterGrade == "C"){
+                return 2.00;
+            } else if (letterGrade == "C-"){
+                return 1.66;
+            } else if (letterGrade == "D+"){
+                return 1.33;
+            } else if (letterGrade == "D"){
+                return 1.00;
+            } else if (letterGrade == "D-"){
+                return 0.66;
+            } else if (letterGrade == "F") {
+                return 0;
+            } else {
+                return -1;
+            }
         };
 
+        var calculateGPA = function(gradeOne, firstCredits, gradeTwo, secondCredits, gradeThree, thirdCredits){
+            var firstGrade = letToNum(gradeOne);
+            var secondGrade = letToNum(gradeTwo);
+            var thirdGrade = letToNum(gradeThree);
+
+            if (firstGrade === -1 || secondGrade === -1 || thirdGrade === -1) {
+                return "Error, you gave us an invalid grade!";
+            }
+
+            return ((firstGrade * firstCredits) +
+                    (secondGrade * secondCredits) +
+                    (thirdGrade * thirdCredits)) / 3;
+        };
+
+        expect(calculateGPA("A", 1, "F", 0, "F", 0)).toBe(4.0/3);
+        expect(calculateGPA("A", 1, "A", 1, "A", 1)).toBe(4.00);
+        expect(calculateGPA("B", 4, "C", 3, "D", 2)).toBe(20.0/3);
+        expect(calculateGPA("S", 1, "A", 1, "A", 1)).toBe("Error, you gave us an invalid grade!");
 
     });
 
-    it('Testing letter to number conversions', function(){
+    it('Testing letter to number conversions', function(){ // I'm ignoring the nesting potential of nested because reasons.
         var letToNum = function(letGrade){
             //if (!letGrade.isString) {
             //    throw InvalidParamsError();
@@ -68,7 +117,7 @@ describe('testing basic functions', function(){
             } else if (letterGrade == "F") {
                 return 0;
             } else {
-                return "InvalidParam";
+                return -1;
             }
         };
 
@@ -84,6 +133,6 @@ describe('testing basic functions', function(){
         expect(letToNum("D")).toBe(1.00);
         expect(letToNum("D-")).toBe(0.66);
         expect(letToNum("F")).toBe(0);
-        expect(letToNum("sdf")).toBe("InvalidParam"); // Can't be bothered to write a custom error, and this will work better with the GPA Calculator function anywhow.
+        expect(letToNum("sdf")).toBe(-1); // Can't be bothered to write a custom error, and this will work fine with the GPA Calculator function anywhow.
     });
 });
