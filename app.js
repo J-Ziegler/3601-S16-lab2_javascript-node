@@ -54,6 +54,16 @@ app.post('/petForm', function(req, res){
     console.log(req.body.newPet);
 });
 
+app.get('/gpa_calculator', function(req, res){
+    res.sendFile('gpa_calculator.html', options);
+});
+
+app.post('/gpaCalc', function(req, res){
+    res.send(
+        "Your GPA is: " + tools.calculateGPA(req.body.firstGrade, req.body.firstCredits, req.body.secondGrade, req.body.secondCredits, req.body.thirdGrade, req.body.thirdCredits)
+    );
+});
+
 app.get('/', function(req, res){
     res.sendFile('index.html', options);
 });
