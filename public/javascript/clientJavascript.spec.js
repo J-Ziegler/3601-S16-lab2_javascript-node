@@ -75,12 +75,12 @@ describe('testing basic functions', function(){
 
             return ((firstGrade * firstCredits) +
                     (secondGrade * secondCredits) +
-                    (thirdGrade * thirdCredits)) / 3;
+                    (thirdGrade * thirdCredits)) / (firstCredits + secondCredits + thirdCredits);
         };
 
-        expect(calculateGPA("A", 1, "F", 0, "F", 0)).toBe(4.0/3);
+        expect(calculateGPA("A", 1, "F", 0, "F", 0)).toBe(4.00);
         expect(calculateGPA("A", 1, "A", 1, "A", 1)).toBe(4.00);
-        expect(calculateGPA("B", 4, "C", 3, "D", 2)).toBe(20.0/3);
+        expect(calculateGPA("B", 4, "C", 3, "D", 2)).toBe(20.0/9);
         expect(calculateGPA("S", 1, "A", 1, "A", 1)).toBe("Error, you gave us an invalid grade!");
 
     });
