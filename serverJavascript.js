@@ -60,9 +60,7 @@ exports.calculateGPA = function(gradeOne, firstCredits, gradeTwo, secondCredits,
         return "Error, you gave us an invalid grade!";
     }
 
-    return ((firstGrade * firstCredits) +
+    return (((firstGrade * firstCredits) +
         (secondGrade * secondCredits) +
-        (thirdGrade * thirdCredits)) / (parseInt(firstCredits) + parseInt(secondCredits) + parseInt(thirdCredits));
+        (thirdGrade * thirdCredits)) / (parseInt(firstCredits) + parseInt(secondCredits) + parseInt(thirdCredits))).toFixed(2);
 };
-
-
